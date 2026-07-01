@@ -1,0 +1,25 @@
+/* ---------------------------------------
+   Override Bootstrap's Primary Button
+   This CSS file is linked AFTER Bootstrap,
+   so these styles replace the default
+   Bootstrap blue button.
+---------------------------------------- */
+
+.btn-primary{
+    background-color:#f84464;      /* Custom pink/red */
+    border-color:#f84464;
+    color:#ffffff;
+}
+
+.btn-primary:hover{
+    background-color:#d62d4d;
+    border-color:#d62d4d;
+    color:#ffffff;
+}
+
+.btn-primary:focus,
+.btn-primary:active{
+    background-color:#c91f45 !important;
+    border-color:#c91f45 !important;
+    box-shadow:0 0 0 .25rem rgba(248,68,100,.35);
+}

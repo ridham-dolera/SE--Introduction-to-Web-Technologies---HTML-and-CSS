@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Links Form</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.form-card{
+    width:100%;
+    max-width:500px;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-group i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:20px;
+    color:#666;
+}
+
+.input-group input{
+    width:100%;
+    height:55px;
+    padding:0 18px 0 55px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    border-color:#4f46e5;
+    box-shadow:0 0 0 4px rgba(79,70,229,.15);
+}
+
+/* Platform Colors */
+.instagram i{
+    color:#E4405F;
+}
+
+.linkedin i{
+    color:#0A66C2;
+}
+
+.github i{
+    color:#181717;
+}
+
+.youtube i{
+    color:#FF0000;
+}
+
+.twitter i{
+    color:#1DA1F2;
+}
+
+button{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:12px;
+    background:#4f46e5;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#4338ca;
+    transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+
+.form-card{
+    padding:22px;
+}
+
+.input-group input{
+    height:50px;
+}
+
+button{
+    height:50px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="form-card">
+
+<h2>Add Your Social Links</h2>
+
+<form>
+
+<div class="input-group instagram">
+    <i class="fab fa-instagram"></i>
+    <input type="url" placeholder="Instagram Profile URL">
+</div>
+
+<div class="input-group linkedin">
+    <i class="fab fa-linkedin"></i>
+    <input type="url" placeholder="LinkedIn Profile URL">
+</div>
+
+<div class="input-group github">
+    <i class="fab fa-github"></i>
+    <input type="url" placeholder="GitHub Profile URL">
+</div>
+
+<div class="input-group youtube">
+    <i class="fab fa-youtube"></i>
+    <input type="url" placeholder="YouTube Channel URL">
+</div>
+
+<div class="input-group twitter">
+    <i class="fab fa-x-twitter"></i>
+    <input type="url" placeholder="X (Twitter) Profile URL">
+</div>
+
+<button type="submit">Save Links</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

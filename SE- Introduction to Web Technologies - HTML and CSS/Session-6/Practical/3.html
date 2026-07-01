@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Notification Badge</title>
+
+<!-- Font Awesome for WhatsApp Icon -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    min-height:200vh; /* Extra height to demonstrate scrolling */
+    padding:30px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+}
+
+/* Fixed WhatsApp Button */
+.whatsapp-chat{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    z-index:1000;
+    transition:0.3s;
+}
+
+.whatsapp-chat:hover{
+    background:#1EBE5B;
+    transform:scale(1.05);
+}
+
+/* Notification Badge */
+.badge{
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    background:red;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+    border:2px solid white;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>WhatsApp Fixed Chat Notification</h1>
+
+<p>
+Scroll down the page to see that the WhatsApp chat button remains fixed
+at the bottom-right corner of the screen.
+</p>
+
+<!-- Fixed WhatsApp Button -->
+<a href="https://wa.me/911234567890"
+   target="_blank"
+   class="whatsapp-chat">
+
+    <i class="fab fa-whatsapp fa-2x"></i>
+    <span>Chat</span>
+
+    <div class="badge">3</div>
+
+</a>
+
+</body>
+</html>

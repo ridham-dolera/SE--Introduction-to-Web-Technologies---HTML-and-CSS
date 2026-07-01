@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Food Order Form</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f8f8f8;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        .order-form{
+            width:100%;
+            max-width:500px;
+            background:#fff;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        h2{
+            text-align:center;
+            color:#e23744;
+            margin-bottom:25px;
+        }
+
+        .form-group{
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:bold;
+            color:#333;
+        }
+
+        input,
+        select,
+        textarea{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            outline:none;
+            border-color:#e23744;
+            box-shadow:0 0 6px rgba(226,55,68,0.3);
+        }
+
+        textarea{
+            resize:vertical;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            background:#e23744;
+            color:#fff;
+            border:none;
+            border-radius:8px;
+            font-size:17px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#c62839;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-form">
+
+    <h2>Zomato Food Order</h2>
+
+    <form action="#" method="post">
+
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your name"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="food">Food Item</label>
+            <select id="food" name="food" required>
+                <option value="">-- Select Food Item --</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Burger">Burger</option>
+                <option value="Biryani">Biryani</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Sandwich">Sandwich</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="20"
+                placeholder="Enter quantity"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="instructions">Delivery Instructions</label>
+            <textarea
+                id="instructions"
+                name="instructions"
+                rows="4"
+                placeholder="Enter delivery instructions..."
+                required></textarea>
+        </div>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

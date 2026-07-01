@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookMyShow Movie Detail</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+    transition:0.4s;
+}
+
+/* Dark Mode */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+header{
+    background:#d32f2f;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+.toggle-btn{
+    background:white;
+    color:#d32f2f;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.toggle-btn:hover{
+    opacity:0.9;
+}
+
+.movie-card{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    display:flex;
+    gap:25px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:0.4s;
+}
+
+.dark-mode .movie-card{
+    background:#1f1f1f;
+}
+
+.movie-card img{
+    width:250px;
+    border-radius:10px;
+}
+
+.movie-info h2{
+    margin-bottom:15px;
+}
+
+.movie-info p{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+.book-btn{
+    margin-top:15px;
+    background:#f84464;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.book-btn:hover{
+    background:#d62d4d;
+}
+
+@media(max-width:768px){
+
+.movie-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.movie-card img{
+    width:100%;
+    max-width:300px;
+    margin:auto;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>🎬 BookMyShow</h1>
+
+    <button class="toggle-btn" onclick="toggleMode()">
+        🌙 Dark Mode
+    </button>
+</header>
+
+<div class="movie-card">
+
+    <img src="https://via.placeholder.com/300x420.png?text=Movie+Poster"
+         alt="Movie Poster">
+
+    <div class="movie-info">
+
+        <h2>Avengers: Endgame</h2>
+
+        <p><strong>Genre:</strong> Action, Adventure, Sci-Fi</p>
+
+        <p><strong>Duration:</strong> 3h 1m</p>
+
+        <p>
+            After the devastating events of Infinity War,
+            the Avengers assemble one final time to restore
+            balance and defeat Thanos.
+        </p>
+
+        <button class="book-btn">
+            Book Tickets
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function toggleMode(){
+
+    document.body.classList.toggle("dark-mode");
+
+    const btn=document.querySelector(".toggle-btn");
+
+    if(document.body.classList.contains("dark-mode")){
+        btn.innerHTML="☀️ Light Mode";
+    }else{
+        btn.innerHTML="🌙 Dark Mode";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

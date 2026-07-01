@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Links Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #121212);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      margin-top: 50px;
+    }
+
+    .form-control {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+    }
+
+    .form-control::placeholder {
+      color: #ccc;
+    }
+
+    .btn-submit {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-submit:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      border-radius: 15px;
+      color: #fff;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .spotify {
+      background: #1DB954;
+    }
+
+    .youtube {
+      background: #FF0000;
+    }
+
+    .apple {
+      background: #000;
+      border: 1px solid #444;
+    }
+
+    .link-text {
+      word-break: break-all;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="form-container mx-auto col-md-6">
+    <h3 class="text-center mb-4">🎵 Music Profile Links</h3>
+
+    <form id="musicLinksForm">
+      <div class="mb-3">
+        <label>Spotify URL</label>
+        <input type="url" id="spotify" class="form-control" placeholder="https://spotify.com/...">
+      </div>
+
+      <div class="mb-3">
+        <label>YouTube Music URL</label>
+        <input type="url" id="youtube" class="form-control" placeholder="https://music.youtube.com/...">
+      </div>
+
+      <div class="mb-3">
+        <label>Apple Music URL</label>
+        <input type="url" id="apple" class="form-control" placeholder="https://music.apple.com/...">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Preview Cards -->
+  <div class="row mt-5" id="previewContainer"></div>
+</div>
+
+<script>
+  const form = document.getElementById("musicLinksForm");
+  const previewContainer = document.getElementById("previewContainer");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    previewContainer.innerHTML = "";
+
+    const spotify = document.getElementById("spotify").value;
+    const youtube = document.getElementById("youtube").value;
+    const apple = document.getElementById("apple").value;
+
+    if (spotify) createCard("Spotify", spotify, "spotify");
+    if (youtube) createCard("YouTube Music", youtube, "youtube");
+    if (apple) createCard("Apple Music", apple, "apple");
+  });
+
+  function createCard(title, link, className) {
+    const col = document.createElement("div");
+    col.className = "col-md-4 mb-4";
+
+    col.innerHTML = `
+      <div class="card ${className}">
+        <h5>${title}</h5>
+        <p class="link-text">${link}</p>
+        <a href="${link}" target="_blank" class="btn btn-light btn-sm mt-2">Open</a>
+      </div>
+    `;
+
+    previewContainer.appendChild(col);
+  }
+</script>
+
+</body>
+</html>

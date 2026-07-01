@@ -1,0 +1,16 @@
+/* Style all playlist items */
+.playlist-item{
+    background-color: #121212;   /* Spotify dark background */
+    color: #ffffff;              /* White text */
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+/* Highlight the currently playing song */
+#currently-playing{
+    background-color: #1DB954;   /* Spotify green */
+    color: #000000;              /* Black text for contrast */
+    font-weight: bold;
+}

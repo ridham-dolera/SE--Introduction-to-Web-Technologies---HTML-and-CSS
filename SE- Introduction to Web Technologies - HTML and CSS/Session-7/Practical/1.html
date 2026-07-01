@@ -1,0 +1,108 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favorite Apps - Flexbox</title>
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            body{
+                background:#f4f4f4;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:100vh;
+            }
+
+            .container{
+                width:90%;
+                max-width:800px;
+                background:#ffffff;
+                padding:30px;
+                border-radius:12px;
+                box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            }
+
+            h2{
+                text-align:center;
+                margin-bottom:25px;
+                color:#333;
+            }
+
+            /* Flexbox Container */
+            .icon-row{
+                display:flex;
+                justify-content:space-evenly;
+                align-items:center;
+                flex-wrap:wrap;
+                gap:20px;
+            }
+
+            .app{
+                text-align:center;
+                transition:0.3s;
+            }
+
+            .app img{
+                width:90px;
+                height:90px;
+                border-radius:20px;
+                object-fit:cover;
+            }
+
+            .app p{
+                margin-top:10px;
+                font-weight:bold;
+                color:#444;
+            }
+
+            .app:hover{
+                transform:scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+
+        <h2>My Favorite Apps</h2>
+
+        <div class="icon-row">
+
+            <div class="app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram">
+                <p>Instagram</p>
+            </div>
+
+            <div class="app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp">
+                <p>WhatsApp</p>
+            </div>
+
+            <div class="app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png"
+                    alt="Zomato">
+                <p>Zomato</p>
+            </div>
+
+            <div class="app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg"
+                    alt="Spotify">
+                <p>Spotify</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    </body>
+    </html>

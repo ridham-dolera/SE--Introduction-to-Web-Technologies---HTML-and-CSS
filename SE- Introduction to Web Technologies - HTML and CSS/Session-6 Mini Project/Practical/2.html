@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gamer Tag Bio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#3d0066,#130018 70%);
+    padding:25px;
+}
+
+.container{
+
+    width:100%;
+    max-width:900px;
+
+    display:flex;
+    gap:35px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:22px;
+    padding:35px;
+    color:white;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
+}
+
+/* Left */
+
+.profile{
+
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.avatar{
+
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:5px solid #9146FF;
+    box-shadow:0 0 35px rgba(145,70,255,.5);
+}
+
+.alias{
+
+    margin-top:20px;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.tag{
+
+    color:#cfcfcf;
+    margin-top:5px;
+}
+
+.bio{
+
+    margin-top:18px;
+    color:#ddd;
+    line-height:1.6;
+}
+
+/* Right */
+
+.links{
+
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.links h2{
+
+    margin-bottom:25px;
+    font-size:1.8rem;
+}
+
+.btn{
+
+    text-decoration:none;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px;
+    margin-bottom:18px;
+
+    border-radius:14px;
+    font-weight:600;
+    font-size:1rem;
+
+    transition:.35s;
+}
+
+.btn i{
+
+    font-size:1.3rem;
+}
+
+.twitch{
+
+    background:#9146FF;
+}
+
+.discord{
+
+    background:#5865F2;
+}
+
+.steam{
+
+    background:#171A21;
+}
+
+.btn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.35);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.container{
+
+    flex-direction:column;
+    padding:30px 20px;
+}
+
+.avatar{
+
+    width:150px;
+    height:150px;
+}
+
+.alias{
+
+    font-size:1.7rem;
+}
+
+.links{
+
+    width:100%;
+}
+
+.links h2{
+
+    text-align:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="profile">
+
+<img
+src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+class="avatar"
+alt="Avatar">
+
+<h1 class="alias">ShadowX</h1>
+
+<p class="tag">@shadowx_gaming</p>
+
+<p class="bio">
+Competitive FPS player 🎮<br>
+Streamer • Community Builder • Content Creator
+</p>
+
+</div>
+
+<div class="links">
+
+<h2>Gaming Profiles</h2>
+
+<a href="#" class="btn twitch">
+<i class="fab fa-twitch"></i>
+Twitch
+</a>
+
+<a href="#" class="btn discord">
+<i class="fab fa-discord"></i>
+Discord
+</a>
+
+<a href="#" class="btn steam">
+<i class="fab fa-steam"></i>
+Steam
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
